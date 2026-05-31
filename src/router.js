@@ -54,4 +54,5 @@ router.beforeEach((to) => {
     return { name: 'projects' }
   }
 })
+
 export default router

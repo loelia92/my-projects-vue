@@ -21,7 +21,7 @@ const fieldId = useId()
   <div class="flex flex-col gap-1.5">
     <label
       :for="fieldId"
-      class="text-text-2 flex items-center justify-between text-xs font-medium"
+      class="flex items-center justify-between text-xs font-medium text-text-2"
     >
       <span class="flex items-center gap-1">
         {{ label }}
@@ -47,14 +47,14 @@ const fieldId = useId()
       :autocomplete="autocomplete"
       :aria-invalid="error ? 'true' : 'false'"
       :aria-describedby="error ? `${fieldId}-err` : undefined"
-      class="border-border bg-surface text-text placeholder:text-text-3 hover:border-border-strong focus:border-accent focus:ring-accent/30 h-10 w-full rounded-md border px-3 text-sm transition-colors focus:ring-2 focus:outline-none"
+      class="h-10 w-full rounded-md border border-border bg-surface px-3 text-sm text-text transition-colors placeholder:text-text-3 hover:border-border-strong focus:border-accent focus:ring-2 focus:ring-accent/30 focus:outline-none"
       :class="error ? 'border-danger focus:border-danger focus:ring-danger/30' : ''"
       @input="$emit('update:modelValue', $event.target.value)"
     />
     <p
       v-if="error"
       :id="`${fieldId}-err`"
-      class="text-danger flex items-center gap-1.5 text-xs"
+      class="flex items-center gap-1.5 text-xs text-danger"
       role="alert"
       aria-live="polite"
     >

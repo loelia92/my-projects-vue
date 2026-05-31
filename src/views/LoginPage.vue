@@ -32,8 +32,8 @@ async function onSubmit() {
     <div class="rise w-full max-w-sm">
       <div class="mb-8 text-center">
         <span class="chip chip-accent mb-4">Welcome back</span>
-        <h1 class="text-text mt-3 text-2xl font-semibold tracking-tight">Sign in to Projects</h1>
-        <p class="text-text-2 mt-1.5 text-sm">Your workspace is waiting.</p>
+        <h1 class="mt-3 text-2xl font-semibold tracking-tight text-text">Sign in to Projects</h1>
+        <p class="mt-1.5 text-sm text-text-2">Your workspace is waiting.</p>
       </div>
       <form
         class="card flex flex-col gap-4 p-6"
@@ -59,7 +59,7 @@ async function onSubmit() {
 
         <p
           v-if="error && Object.keys(fieldErrors).length === 0"
-          class="border-danger/30 bg-danger-soft text-danger flex items-center gap-2 rounded-md border px-3 py-2 text-xs"
+          class="flex items-center gap-2 rounded-md border border-danger/30 bg-danger-soft px-3 py-2 text-xs text-danger"
           role="alert"
           aria-live="polite"
         >
@@ -74,11 +74,11 @@ async function onSubmit() {
           {{ loading ? 'Signing in…' : 'Sign in' }}
         </AppButton>
       </form>
-      <p class="text-text-2 mt-5 text-center text-sm">
+      <p class="mt-5 text-center text-sm text-text-2">
         New here?
         <RouterLink
           to="/register"
-          class="text-accent font-medium underline-offset-4 hover:underline"
+          class="font-medium text-accent underline-offset-4 hover:underline"
         >
           Create an account
         </RouterLink>
